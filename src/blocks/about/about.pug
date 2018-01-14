@@ -1,0 +1,29 @@
+-
+	var data = [
+		{
+			iconUrl: asset('i/icon-brain.png'),
+			title: 'Обучение',
+			p: 'Цветам, формам, буквам, цифрам, основам счета'
+		},
+		{
+			iconUrl: asset('i/icon-navigation.png'),
+			title: 'Развитие',
+			p: 'Речи, логики, мышления, моторики рук'
+		},
+		{
+			iconUrl: asset('i/icon-board.png'),
+			title: 'Интерактивность',
+			p: 'Обучение программ, развивающие игры, создание игр, приложений'
+		},
+	]
+mixin about-block(iconUrl, title, p)
+	.main-item
+		img.icon(src=iconUrl)
+		h5.about-title= title
+		p.about-text= p
+section.about
+	.container
+		h2.section-title Что я могу
+		.main
+			each block in data
+				+about-block(block.iconUrl, block.title, block.p)
