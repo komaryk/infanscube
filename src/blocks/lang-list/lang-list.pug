@@ -1,0 +1,24 @@
+mixin b-lang(items)
+	+b('ul').lang-list
+		each item in items
+			+e('li').item
+				a(href=item.url)= item.label
+
+
+- 
+	var langMenuItems = [
+		{
+			url: '#',
+			label: "Укр"
+		},
+
+		{
+			url: '#',
+			label: "Рус"
+		},
+
+		{
+			url: '#',
+			label: "Eng"
+		}
+	]

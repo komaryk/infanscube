@@ -1,64 +1,7 @@
 mixin b-header()
 	+b('header').header
-		+e(img).logo(src=asset('i/logo.png') )
+		+e.logo_wrap
+			+e(img).logo(src=asset('i/logo.png') )
+		+b.nav-toggler &#9776;
 		+b-menu(menuItems)
 		+b-lang(langMenuItems)
-
-mixin b-menu(items)
-	+b('ul').menu
-		each item in items
-			+e(li).item
-				a(href=item.url)= item.label
-
-mixin b-lang(items)
-	+b('ul').lang-list
-		each item in items
-			+e('li').item
-				a(href=item.url)= item.label
-
-
-- 
-	var menuItems = [
-		{
-			url: '#',
-			label: "О проекте"
-		},
-
-		{
-			url: '#',
-			label: "Функционал"
-		},
-
-		{
-			url: '#',
-			label: "Преимущества"
-		},
-
-		{
-			url: '#',
-			label: "Отзывы"
-		},
-
-		{
-			url: '#',
-			label: "Конструкция"
-		}
-	]
-
-- 
-	var langMenuItems = [
-		{
-			url: '#',
-			label: "Укр"
-		},
-
-		{
-			url: '#',
-			label: "Рус"
-		},
-
-		{
-			url: '#',
-			label: "Eng"
-		}
-	]

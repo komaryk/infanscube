@@ -1,0 +1,10 @@
+.lang-list
+	display: flex
+	font-size: 20px
+	
+	&__item
+		a:hover
+			text-decoration: underline
+			
+	&__item:not(:first-of-type)
+		@extend .is-hidden

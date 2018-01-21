@@ -1,0 +1,34 @@
+mixin b-menu(items)
+	nav.navigation
+		+b('ul').menu
+			each item in items
+				+e(li).item
+					a(href=item.url)= item.label
+
+- 
+	var menuItems = [
+		{
+			url: '#',
+			label: "О проекте"
+		},
+
+		{
+			url: '#',
+			label: "Функционал"
+		},
+
+		{
+			url: '#',
+			label: "Преимущества"
+		},
+
+		{
+			url: '#',
+			label: "Отзывы"
+		},
+
+		{
+			url: '#',
+			label: "Конструкция"
+		}
+	]
