@@ -1,5 +1,12 @@
 include ../../node_modules/bemto.pug/bemto
 
+-
+	set_bemto_settings({
+		prefix: '',
+		element: '__',
+		modifier: '--'
+	})
+
 include ../globals/common
 
 include ../blocks/all

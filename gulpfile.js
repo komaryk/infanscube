@@ -5,7 +5,7 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
 var del = require('del');
-
+var notify = require("gulp-notify");
 var moduleBgFix = require('./moduleBgFix');
 
 var processors = [
@@ -33,7 +33,7 @@ gulp.task('js', function(){
 
 gulp.task('css', function(){
 	return gulp.src('src/assets/*.styl')
-		.pipe(stylus())
+		.pipe(stylus()).on('error', notify.onError())
 		.pipe(postcss(processors))
 		.pipe(gulp.dest('build/assets'))
 		.pipe(browserSync.stream())
