@@ -89,6 +89,7 @@ td {
 a img {
   border: none;
 }
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
 .cleafix:before,
 .cleafix:after {
   content: ' ';
@@ -97,6 +98,7 @@ a img {
 }
 html,
 body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
