@@ -1,6 +1,8 @@
 .preorder
 	position relative
 	display flex
+	flex-direction column
+	align-items center
 	background-color #fff
 
 	// &::after
@@ -11,28 +13,54 @@
 	// 	height 100%
 	// 	background-image url('i/bg-preorder.png')
 	// 	background-size cover
+	
+	@media (min-width: tablets)
+		flex-direction row
 
 	.image
 	.text_content
-		width 50%
+		width 100%
+		
+		@media (min-width: tablets)
+			width 50%
+			
+	.image
+		margin-bottom 15px
+		
+		@media (min-width: tablets)
+			margin-bottom 0
 	
 	.text_content
 		display flex
 		flex-direction column
 		justify-content center
+		margin-bottom 30px
+		text-align center
+			
+		@media (min-width: tablets)
+			text-align left
+			margin-bottom 0
 
 .image__item
 	display block
 
 .text_content__title
-	margin-bottom 30px
+	margin-bottom 15px
 	color #394953
-	font-size 50px
+	font-size 32px
 	font-weight 600
+	
+	@media (min-width: desktops)
+		margin-bottom 30px
+		font-size 40px
+
+	@media (min-width: large_desktops)
+		font-size 50px
+
 
 .preorder_button
 	display inline-block
-	padding 15px 60px
+	padding 5px 24px
 	border-radius 8px
 	border 2px solid #ce2d6c
 	background-color #ce2d6c
@@ -45,3 +73,6 @@
 	
 	&:hover
 		opacity 0.8
+		
+	@media (min-width: desktops)
+		padding 15px 60px
