@@ -1,12 +1,49 @@
+.navigation
+	width: 100%
+	text-align: center
+	display: none
+	
+	@media (min-width: tablets)
+		display: block !important
+		width: auto
+
 .menu
 	display: flex
 	flex-wrap: wrap
+	flex-direction: column
 	margin: 0 -10px
 	font-size: 20px
 	
+		
+	@media (min-width: tablets)
+		flex-direction: row
+
 	@media(min-width: desktops)
 		margin: 0
-
+		
 	&__item
+		position: relative
 		padding: 0 10px
+		transition: 0.2s
+		
+		a:hover
+			color: #ce2d6c
+		
+		a::after
+			content: ""
+			position: absolute
+			bottom: -5px
+			left: 10px
+			width: calc(100% - 20px)
+			height: 2px
+			background-color: #ce2d6c
+			opacity: 0
+			transition: 0.2s
+			
+		@media (min-width: tablets)
+			a:hover
+				color: inherit
+			
+			a:hover::after
+				opacity: 1
 		
