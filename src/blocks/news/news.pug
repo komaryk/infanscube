@@ -1,0 +1,14 @@
+mixin news-piece(text, date, url, iconlink)
+  +b('a').news-item(href=url)= text
+    +b('p').post-date
+      +e('p').date= date
+      +e('img').link(src= iconlink)
+
++b('section').news
+  +e('h2').title Наши новости
+  .news-container
+    each block in news
+      +news-piece (block.text, block.date, block.url, block.iconlink)
+  +e.footer
+    +e('a').button Читать еще
+  
