@@ -1,0 +1,8 @@
+mixin b-preorder()
+	+b('section').preorder
+		+b.image
+			+e.item(src=asset('i/cube.jpg') )
+		+b.text_content
+			+e.title Хочешь себе такой?
+			+e.button_wrap
+				a.preorder_button(href='#') Предзаказ

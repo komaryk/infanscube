@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 .cleafix:before,
 .cleafix:after {
   content: ' ';
@@ -170,4 +170,52 @@ a {
   .nav-toggler {
     display: none;
   }
+}
+.preorder {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+.preorder .image,
+.preorder .text_content {
+  width: 50%;
+}
+.preorder .text_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.image__item {
+  display: block;
+}
+.text_content__title {
+  margin-bottom: 30px;
+  color: #394953;
+  font-size: 50px;
+  font-weight: 600;
+}
+.preorder_button {
+  display: inline-block;
+  padding: 15px 60px;
+  border-radius: 8px;
+  border: 2px solid #ce2d6c;
+  background-color: #ce2d6c;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.preorder_button:hover {
+  opacity: 0.8;
 }
